@@ -3,3 +3,6 @@
 /src/node_modules/@sapper/
 yarn-error.log
 /__sapper__/
+.vscode
+scripts
+package-lock.json
