@@ -1,5 +1,7 @@
 export function get(req, res, next) {
 
+    res.writeHead(200, {"Content-Type": "application/json; charset=utf-8"});
+
     const { timeString } = req.params;
     
     let timeStamp = new Date(timeString);   // try string
