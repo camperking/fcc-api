@@ -10,7 +10,10 @@
 
 <h1>freeCodeCamp Api and Microservices Projects</h1>
 
-<p>Here I present you my solutions for the freeCodeCamp Api and Microservices Certificate.</p>
+<p>
+	Here I present you my solutions for the freeCodeCamp Api and Microservices Certificate.<br>
+	The source is available at <a href="https://github.com/camperking/fcc-api">https://github.com/camperking/fcc-api</a>
+</p>
 
 <h2>TimeStamp Api</h2>
 <p>
@@ -32,3 +35,5 @@
 </p>
 
 <h2>Request Header Parser</h2>
+
+<p><a href="./api/whoami">./api/whoami</a> - whoami</p>
