@@ -37,3 +37,7 @@
 <h2>Request Header Parser</h2>
 
 <p><a href="./api/whoami">./api/whoami</a> - whoami</p>
+
+<h2>URL Shortener</h2>
+
+<p><a href="./api/shorturl/07ab071c41bab383f00019662663303b">./api/shorturl/07ab071c41bab383f00019662663303b</a> - redirects back to this page</p>
