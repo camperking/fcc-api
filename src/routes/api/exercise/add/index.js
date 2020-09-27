@@ -9,7 +9,7 @@ export async function post (req, res) {
 
     const exercise = { ...req.body };
     
-    if (exercise.date === 'undefined') {
+    if (exercise.date === undefined) {
         const now = moment().format('YYYY-MM-DD');
         exercise.date = now;
     }
