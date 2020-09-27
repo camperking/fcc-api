@@ -9,7 +9,7 @@ export async function post (req, res) {
 
     const exercise = { ...req.body };
     
-    if (exercise.date === undefined) {
+    if (exercise.date === 'undefined' || exercise.date === undefined) {
         const now = moment().format('YYYY-MM-DD');
         exercise.date = now;
     }
@@ -26,6 +26,8 @@ export async function post (req, res) {
        
         exercise._id = exercise.userId;
         delete exercise.userId;
+
+        exercise.duration = Number(exercise.duration);
 
         res.end(JSON.stringify(exercise));
 
