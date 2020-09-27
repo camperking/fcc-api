@@ -1,4 +1,5 @@
 import { db } from '../../../../server.js';
+import moment from 'moment';
 
 
 
@@ -7,10 +8,10 @@ export async function post (req, res) {
     res.writeHead(200, {"Content-Type": "application/json; charset=utf-8"});
 
     const exercise = { ...req.body };
-    console.log(exercise);
+    
     if (exercise.date === 'undefined') {
-        const now = new Date();
-        exercise.date = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate();
+        const now = moment().format('YYYY-MM-DD');
+        exercise.date = now;
     }
 
     const users = db.getCollection('users');
