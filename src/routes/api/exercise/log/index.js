@@ -1,11 +1,18 @@
 import { db } from '../../../../server.js';
+import moment from 'moment';
 
 export async function get (req, res) {
 
     res.writeHead(200, {"Content-Type": "application/json; charset=utf-8"});
 
-    const { userId, from, to, limit } = req.query;
+    const { userId, limit } = req.query;
+    let { from, to } = req.query;
 
+    if (from === undefined && to === undefined) {
+        from = 0;
+        to = moment().format('YYYY-MM-DD');
+    }
+    
     const users = db.getCollection('users');
 
     const user = users.findOne({'$loki': Number(userId)});
