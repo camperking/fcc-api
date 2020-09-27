@@ -41,3 +41,7 @@
 <h2>URL Shortener</h2>
 
 <p><a href="./api/shorturl/07ab071c41bab383f00019662663303b">./api/shorturl/07ab071c41bab383f00019662663303b</a> - redirects back to this page</p>
+
+<h2>Exercise Tracker</h2>
+
+<p><a href="./api/exercise">./api/exercise</a> - exercise tracker with forms</p>

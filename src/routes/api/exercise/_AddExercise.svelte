@@ -11,7 +11,7 @@
 
         const body = new URLSearchParams();
 
-        body.append('_id', userId);
+        body.append('userId', userId);
         body.append('description', description);
         body.append('duration', duration);
         body.append('date', date);

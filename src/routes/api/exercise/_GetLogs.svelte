@@ -53,6 +53,6 @@
     </form>
 </div>
 {#if showLogs}
-    <input type="button" value="hide users" on:click={() => {showLogs = false}} />
+    <input type="button" value="hide logs" on:click={() => {showLogs = false}} />
     {JSON.stringify(logs)}
 {/if}
