@@ -29,9 +29,13 @@ export async function post (req, res) {
 
         exercise.duration = Number(exercise.duration);
 
+        exercises.insert({...exercise});
+
+        exercise.date = new Date(exercise.date).toDateString();
+
         res.end(JSON.stringify(exercise));
 
-        exercises.insert(exercise);
+        
         
     } else {
         res.end('{"error": "no user"}');

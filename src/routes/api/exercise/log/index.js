@@ -31,6 +31,7 @@ export async function get (req, res) {
 
         log.log = exerciseLog.map(exercise => {
             const { description, duration, date } = exercise;
+            date = new Date(date).toDateString();
             return { description, duration, date };
         });
         
