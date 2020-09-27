@@ -26,7 +26,7 @@ export async function get (req, res) {
             const { description, duration, date } = exercise;
             return { description, duration, date };
         });
-        console.log(logs);
+        
         res.end(JSON.stringify(log));
 
     } else {

@@ -45,7 +45,7 @@
 <h2>get logs</h2>
 <div class="content">
     <form>
-        <label>Userid: <input type="number" name="userId" bind:value={userId} /></label>
+        <label>UserId: <input type="number" name="userId" bind:value={userId} /></label>
         <label>From: <input type="date" name="from" bind:value={from} /></label>
         <label>To: <input type="date" name="to" bind:value={to} /></label>
         <label>Limit: <input type="number" name="limit" bind:value={limit} /></label>
