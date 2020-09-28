@@ -20,20 +20,22 @@ export async function post (req, res) {
 
     if (user) {
 
-        exercise.username = user.username;
+
+        const response = {};
+
+        response._id = exercise.userId;
+        response.username = user.username;
+        response.date = new Date(exercise.date).toDateString();
+        response.duration = Number(exercise.duration);
+        response.description = exercise.description;
 
         const exercises = db.getCollection('exercises');
-       
-        exercise._id = exercise.userId;
-        delete exercise.userId;
+        const dbInsert = {...response};
+        dbInsert.date = new Date(response.date).toISOString().slice(0, 10);
 
-        exercise.duration = Number(exercise.duration);
+        exercises.insert(dbInsert);
 
-        exercises.insert({...exercise});
-
-        exercise.date = new Date(exercise.date).toDateString();
-
-        res.end(JSON.stringify(exercise));
+        res.end(JSON.stringify(response));
 
         
         
