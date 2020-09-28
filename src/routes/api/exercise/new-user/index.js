@@ -17,8 +17,10 @@ export async function post (req, res) {
 
         user = users.insert({ username });
 
+        const _id = new String(user['$loki']);
+
         res.writeHead(200, {"Content-Type": "application/json; charset=utf-8"});
-        res.end(JSON.stringify({username, _id: user['$loki']}));
+        res.end(JSON.stringify({username, _id}));
 
     }
 }
