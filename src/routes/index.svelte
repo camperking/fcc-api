@@ -1,3 +1,18 @@
+<script>
+
+	let fileReport = {};
+
+	async function fileAnalyse() {
+		const body = new FormData(analyseForm);
+
+		const res = await fetch('./api/fileanalyse/', {method: 'post', body});
+
+		fileReport = await res.json();
+
+	}
+
+</script>
+
 <style>
 	p {
 		margin-left: 1em;
@@ -45,3 +60,11 @@
 <h2>Exercise Tracker</h2>
 
 <p><a href="./api/exercise">./api/exercise</a> - exercise tracker with forms</p>
+
+<h2>File Analyser</h2>
+<form id="analyseForm">
+	<input type="file" name="upfile" />
+	<input type="button" value="analyse file" on:click={fileAnalyse} />
+</form>
+{JSON.stringify(fileReport)}
+
